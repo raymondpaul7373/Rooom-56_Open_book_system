@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Admin_page</title>
+
+    <style>
+       .button{
+            padding-top: 45px;
+            padding-left:115px;
+       }
+       .button1{
+           padding-top: 45px;
+           padding-left:50px;
+       }
+       .container{
+           padding-top: 30px;
+       }
+       .container2{
+           padding-top:10px;
+       }
+       .bt{
+           text-align: center;
+       }
+       .bts{
+           padding-left: 100px;
+       }
+
+
+    </style>
+  </head>
+  <body>
+      <!-- <div class="button">
+          <button type="button" onclick=>
+
+          </button>
+      </div> -->
+      <!-- open button -->
+    <div class="btn-group button" role="group" aria-label="Basic checkbox toggle button group" id="opentime">
+        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btncheck1">Open Time</label>
+      </div>
+      <!-- close button -->
+      <div class="btn-group button1" role="group" aria-label="Basic checkbox toggle button group">
+        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btncheck1">Close Time</label>
+      </div>
+      <!-- select stocks -->
+      <div class="container">
+        <h4>SELECT STOCKS</h4>
+        <select class="form-select" multiple aria-label="multiple select example" size="3">
+            <option value="dbs" selected>DBS</option>
+            <option value="b1">Bank-1</option>
+            <option value="b2">Bank-2</option>
+            <option value="b3">Bank-3</option>
+            <option value="b4">Bank-4</option>
+          </select>
+      </div>
+      <!-- from-to dates of stocks -->
+      <div class="input-group mb-3 container">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon1">From</button>
+        <input type="date" class="form-control" placeholder=""  aria-describedby="button-addon1">
+      </div>
+
+      <div class="input-group mb-3 container2 container">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon1">To</button>
+        <input type="date" class="form-control" placeholder=""  aria-describedby="button-addon1">
+      </div>
+
+      <!-- show orders -->
+      <div class="bt">
+        <button type="button" class="btn btn-primary">Show orders</button>
+      </div>
+      
+      <!-- Execution quantity and execution price -->
+      <div class="bts">
+      <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">quantity</span>
+        <input type="numer" class="form" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+      </div>
+      <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">price</span>
+        <input type="number" class="form" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+      </div>
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+      <!-- list of stocks -->
+      <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">Stocks Name</th>
+            <th scope="col">Order Quantity</th>
+            <th scope="col">Executed Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Order Status</th>
+            <th scope="col">Order Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Bank</td>
+            <td>100</td>
+            <td>100</td>
+            <td>5000</td>
+            <td>Accepted</td>
+            <td>12-10-21</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Bank</td>
+            <td>100</td>
+            <td>100</td>
+            <td>5000</td>
+            <td>Accepted</td>
+            <td>12-10-21</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Bank</td>
+            <td>100</td>
+            <td>100</td>
+            <td>5000</td>
+            <td>Accepted</td>
+            <td>12-10-21</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- execute order -->
+     <!-- show orders -->
+     <div class="bt">
+        <button type="button" class="btn btn-primary">Execute orders</button>
+      </div>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
