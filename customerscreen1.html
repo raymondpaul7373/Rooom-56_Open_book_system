@@ -1,0 +1,46 @@
+<html>
+<head>
+<script type="text/javascript">
+    function ShowHideDiv() {
+        var limit = document.getElementById("limit");
+        var dv = document.getElementById("dv");
+        dv.style.display = limit.checked ? "block" : "none";
+    }
+</script>
+<style>
+.content{
+max-width:500px;
+margin:auto;
+}
+input[type=button]
+{
+background-color:#4CAF50;
+}
+</style>
+</head>
+<body>
+<div class="content">
+<h1 style="color:red">  Book your order here </h1>
+<label for="stock"> Search Stock: </label>
+<select name="stock" id="stock">
+<option value="stock0">Select</option>
+<option value="stock1">Stock-1</option>
+<option value="stock2">Stock-2</option>
+<option value="stock3">Stock-3</option>
+<option value="stock4">Stock-4</option>
+</select>
+<br><br>
+<label for="order"> Order Type: </label>
+<select name="order" id="order">
+<option value="order0">Select</option>
+<option value="order1">limit</option>
+<option value="order2">market</option>
+</select>
+<br><br>
+<label for="price">price :</label>
+<input type="number" id="price" name="price"><br><br>
+<label for="quantity">Quantity :</label>
+<input type="number" id="quantity" name="quantity"><br><br>
+<input type="submit" value="Place Order">
+</body>
+</html>
