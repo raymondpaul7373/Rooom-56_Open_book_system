@@ -7,6 +7,28 @@
         dv.style.display = limit.checked ? "block" : "none";
     }
 </script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+
+ 
+
+    $('#order').change(function(){
+
+ 
+
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".box").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".box").hide();
+            }
+        });
+    }).change();
+    });
+</script>
 <style>
 .content{
 max-width:500px;
@@ -32,15 +54,21 @@ background-color:#4CAF50;
 <br><br>
 <label for="order"> Order Type: </label>
 <select name="order" id="order">
-<option value="order0">Select</option>
-<option value="order1">limit</option>
-<option value="order2">market</option>
+<option>Select</option>
+<option value="limit">limit</option>
+<option value="market">market</option>
 </select>
 <br><br>
+<div class="limit box">
 <label for="price">price :</label>
 <input type="number" id="price" name="price"><br><br>
 <label for="quantity">Quantity :</label>
 <input type="number" id="quantity" name="quantity"><br><br>
+</div>
+<div class="market box">
+<label for="quantity">Quantity :</label>
+<input type="number" id="quantity" name="quantity"><br><br>
+</div>
 <input type="submit" value="Place Order">
 </body>
 </html>
